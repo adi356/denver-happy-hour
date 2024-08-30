@@ -17,12 +17,12 @@ const Header = () => {
                 <Image
                     src="/Denver.png"
                     alt="Denver Happy Hour Header"
-                    width={150}
-                    height={50}
+                    layout="fill"
+                    objectFit='cover'
                 />
             </div>
 
-            <div className="md:hidden">
+            <div className="absolute top-4 right-4 z-20">
                 <button
                     onClick={toggleMenu}
                     className="text-white focus:outline-none"
@@ -45,14 +45,14 @@ const Header = () => {
                 </button>
             </div>
 
-            <nav className={`${isOpen ? 'block' : 'hidden'} md:flex md:items-center`}>
-                <a href="FDD" className="text-white px-4 py-2 hover:bg-gray-700">
+            <nav className={`absolute top-16 right-4 z-20 bg-gray-800 text-white ${isOpen ? 'block' : 'hidden'}`}>
+                <a href="FDD" className="block px-4 py-2 hover:bg-gray-700">
                     Featured Daily Deals
                 </a>
-                <a href="Neighborhoods" className="text-white px-4 py-2 hover:bg-gray-700">
+                <a href="Neighborhoods" className="block px-4 py-2 hover:bg-gray-700">
                     Neighborhoods
                 </a>
-                <a href="LateNight" className="text-white px-4 py-2 hover:bg-gray-700">
+                <a href="LateNight" className="block px-4 py-2 hover:bg-gray-700">
                     Late Night
                 </a>
             </nav>
